@@ -1,0 +1,9 @@
+Bill No,Date,Customer,Phone,Type,Place,Site,Payment Type,Include GST
+0005,01/12/2025 10:03 PM,Sakshi,4654467577,Retail,,,Credit,Yes
+
+S.No,Brand,Product,Qty,Rate,Amount
+1,Finolex,Wire 2.5mm,10.0,1451.52,14515.2
+
+Total,,,,,17127.94
+Amount Paid,,,,,7127.94
+Remaining Amount,,,,,10000.00
