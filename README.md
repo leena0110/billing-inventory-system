@@ -1,215 +1,211 @@
-RITE ELECTRICALS – Billing & Inventory Management System
-
-
-
-
-
-
-
+# RITE ELECTRICALS – Billing & Inventory Management System
 
 A production-ready desktop application for automated billing, inventory tracking, customer management, and sales analytics designed for electrical goods businesses.
 
-📋 Project Overview
+## 📋 Project Overview
 
 The RITE ELECTRICALS Billing System is a full-scale business automation tool that:
+- Handles 500+ daily transactions efficiently
+- Manages real-time inventory using FIFO methodology
+- Automates GST billing (18% = 9% CGST + 9% SGST)
+- Tracks complete customer histories & credit systems
+- Generates and sends digital receipts via WhatsApp
+- Supports multi-user roles (Admin & User)
+- Exports comprehensive business reports in CSV format
 
-Handles 500+ daily transactions
+## ⭐ Key Features
 
-Manages real-time inventory using FIFO
+### 🔐 Authentication System
+- Admin & User roles with restricted access
+- Secure login system for sensitive operations
 
-Automates GST billing (18% = 9% CGST + 9% SGST)
+### 📦 Inventory Management (FIFO-Based)
+- Automated stock updates on purchase/sale transactions
+- Complete stock tracking: Opening, Closing, Purchased, Sold
+- Real-time stock level alerts and warnings
+- First-In-First-Out valuation for accurate costing
 
-Tracks customer histories & credit
+### 🧾 Billing System
+- Automatic GST calculation and application
+- Support for Retail/Wholesale pricing models
+- Printable physical receipts
+- Digital receipt delivery via WhatsApp API
 
-Generates digital receipts via WhatsApp
+### 👤 Customer Management
+- Comprehensive customer database
+- Complete purchase history tracking
+- Credit system management
+- Auto-suggest search functionality
 
-Supports admin & user roles
+### 📊 Reporting & Analytics
+- Daily/Monthly/Custom sales reports
+- Stock summary analytics
+- CSV export for external analysis
+- Business performance insights
 
-Exports reports in CSV
+### 🔄 Purchase Order & Supplier Tracking
+- Supplier details management
+- Purchase entries recording
+- Payment receipts generation
 
-⭐ Key Features
-🔐 Authentication
+## 🏗️ Project Structure
+billing-inventory-system/
+├── main.py # Application entry point
+├── src/
+│ ├── app/ # Main application logic
+│ ├── config/ # Configuration files
+│ │ └── colors.py # UI themes and colors
+│ ├── ui/ # User interface
+│ │ ├── main_window.py # Main application window
+│ │ └── dialogs.py # Popup dialogs and forms
+│ ├── models/ # Data models
+│ │ ├── product.py # Product data model
+│ │ └── customer.py # Customer data model
+│ ├── utils/ # Utility functions
+│ │ ├── file_operations.py # CSV file read/write operations
+│ │ ├── calculations.py # GST, totals, stock calculations
+│ │ └── reports.py # Report generation
+│ └── features/ # Feature modules
+│ ├── admin_features.py # Admin-specific functionality
+│ └── billing_operations.py # Core billing operations
+├── data/ # CSV data files
+├── requirements.txt # Python dependencies
+└── README.md # This documentation
 
-Admin & User roles
+text
 
-Restricted access for sensitive operations
+## 🚀 Installation & Setup
 
-📦 Inventory Management (FIFO-Based)
-
-Auto updates on purchase/sale
-
-Opening, closing, purchased, sold stock
-
-Stock level alerts
-
-🧾 Billing System
-
-GST auto-calculation
-
-Retail/Wholesale pricing
-
-Printable receipts
-
-Digital receipts via WhatsApp
-
-👤 Customer Management
-
-Customer database
-
-Full purchase history
-
-Credit tracking
-
-📊 Reporting
-
-Daily / Monthly / Custom sales reports
-
-Stock summary analytics
-
-CSV export
-
-🔄 Purchase Order + Supplier Tracking
-
-Supplier details
-
-Purchase entries
-
-Payment receipts
-
-🏗️ Project Structure
-src/
-├── app/
-│   ├── main.py                # Application entry point
-│   ├── config/
-│   │   └── colors.py          # UI themes
-│   ├── ui/
-│   │   ├── main_window.py     # Main UI
-│   │   └── dialogs.py         # Popup dialogs
-│   ├── models/
-│   │   ├── product.py         # Product model
-│   │   └── customer.py        # Customer model
-│   ├── utils/
-│   │   ├── file_operations.py # CSV interactions
-│   │   ├── calculations.py    # GST, totals, stock logic
-│   │   └── reports.py         # CSV report generation
-│   └── features/
-│       ├── admin_features.py  
-│       └── billing_operations.py
-
-🚀 Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/yourusername/rite-electricals-billing-system.git
-cd rite-electricals-billing-system
-
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/leena0110/billing-inventory-system.git
+cd billing-inventory-system
 2️⃣ Install Dependencies
+bash
 pip install -r requirements.txt
+If requirements.txt is not available, install:
 
+bash
+pip install tkinter
 3️⃣ Run the Application
+bash
 python main.py
-
 🔑 Default Login Credentials
 Role	Username	Password
 Admin	admin	admin123
 User	user	user123
-📊 Data Storage (CSV Files Used)
+📊 Data Storage (CSV Files)
+The application uses CSV files for lightweight, portable data storage:
 
-products.csv
+products.csv - Product catalog with SKU, name, rate, GST, stock
 
-customers.csv
+customers.csv - Customer database with contact and credit info
 
-sales_receipts.csv
+sales_receipts.csv - Complete sales transaction records
 
-purchases.csv
+purchases.csv - Purchase order records from suppliers
 
-purchase_receipts.csv
+purchase_receipts.csv - Purchase transaction records
 
-future_rate_changes.csv
+future_rate_changes.csv - Scheduled product rate changes
 
-bill_*.csv
+bill_*.csv - Generated bill records
 
-receipt_*.txt
+receipt_*.txt - Printable receipt files
 
-🔧 Key Modules (Summary)
+🔧 Key Modules
 <details> <summary><strong>1. Billing System</strong></summary>
+Product selection with real-time stock preview
 
-Product selection with stock preview
+Automatic GST calculation (CGST + SGST)
 
-GST auto-calculation
+Support for Cash and Credit payment modes
 
-Cash/Credit payment modes
+Printable physical receipts + Digital WhatsApp receipts
 
-Printable + WhatsApp receipts
+Discount and promotional pricing support
 
-</details> <details> <summary><strong>2. Inventory Management</strong></summary>
+</details><details> <summary><strong>2. Inventory Management</strong></summary>
+FIFO (First-In-First-Out) stock valuation
 
-FIFO stock valuation
+Automated stock updates on transactions
 
-Automated stock updates
+Real-time low stock threshold alerts
 
-Real-time threshold alerts
+Complete stock movement tracking
 
-</details> <details> <summary><strong>3. Customer Management</strong></summary>
+</details><details> <summary><strong>3. Customer Management</strong></summary>
+Customer purchase history tracking
 
-Purchase history
+Credit ledger management
 
-Credit ledger
+Auto-suggest search functionality
 
-Auto-suggest search
+Customer analytics and insights
 
-</details> <details> <summary><strong>4. Admin Features</strong></summary>
-
+</details><details> <summary><strong>4. Admin Features</strong></summary>
 Add/Edit/Delete products
 
-Schedule rate changes
+Schedule future rate changes
 
-Full sales reporting
+Full sales reporting and analytics
 
-</details> <details> <summary><strong>5. Reporting & Analytics</strong></summary>
+System configuration and settings
 
-Daily reports
+</details><details> <summary><strong>5. Reporting & Analytics</strong></summary>
+Daily sales reports
 
-Monthly/Custom filters
+Monthly/Custom period filters
 
-CSV export
+Stock summary analytics
+
+CSV export functionality
 
 </details>
 💼 Business Impact
+✅ Automated 500+ daily transactions efficiently
 
-✔ Automated 500+ daily transactions
-✔ Cut billing time from 10 minutes → 2 minutes
-✔ Eliminated stock discrepancies
-✔ Delivered 300+ invoices monthly via WhatsApp
-✔ Improved customer satisfaction
+✅ Reduced billing time from 10 minutes → 2 minutes per invoice
+
+✅ Eliminated stock discrepancies through FIFO tracking
+
+✅ Delivered 300+ invoices monthly via WhatsApp digital delivery
+
+✅ Improved customer satisfaction with faster service
 
 🛠️ Technical Implementation
 Tech Stack
+Language: Python 3.8+
 
-Python 3.8+
+GUI Framework: Tkinter
 
-Tkinter GUI
+Data Storage: CSV file system
 
-CSV Storage
+Date Picker: tkcalendar
 
-tkcalendar (date picker)
-
-Webbrowser API (WhatsApp integration)
+Integration: Webbrowser API (WhatsApp integration)
 
 Design Patterns Used
+MVC Architecture - Clear separation between Models, Views, and Controllers
 
-MVC Architecture
+Factory Pattern - For creating standardized UI widgets and components
 
-Factory Pattern (widgets)
+Observer Pattern - For real-time updates between different modules
 
-Observer Pattern
-
-Modular component design
+Modular Component Design - Independent, reusable components
 
 Performance Optimizations
+Lazy Loading - Data loaded on-demand to reduce startup time
 
-Lazy loading
+Caching - Frequently accessed data cached in memory
 
-Caching
+Batch File Operations - Efficient CSV read/write operations
 
-Batch file operations
+Non-blocking UI - Background processing for long operations
 
-Non-blocking UI
+👩‍💻 Author
+Leena Sri K
+
+GitHub: @leena0110
+
+Email: leenasri0110@gmail.com
