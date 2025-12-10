@@ -50,27 +50,27 @@ The RITE ELECTRICALS Billing System is a full-scale business automation tool tha
 
 ## 🏗️ Project Structure
 billing-inventory-system/
-├── main.py                    # Application entry point
+├── main.py # Application entry point
 ├── src/
-│   ├── app/                   # Main application logic
-│   ├── config/                # Configuration files
-│   │   └── colors.py          # UI themes and colors
-│   ├── ui/                    # User interface
-│   │   ├── main_window.py     # Main application window
-│   │   └── dialogs.py         # Popup dialogs and forms
-│   ├── models/                # Data models
-│   │   ├── product.py         # Product data model
-│   │   └── customer.py        # Customer data model
-│   ├── utils/                 # Utility functions
-│   │   ├── file_operations.py # CSV file read/write operations
-│   │   ├── calculations.py    # GST, totals, stock calculations
-│   │   └── reports.py         # Report generation
-│   └── features/              # Feature modules
-│       ├── admin_features.py  # Admin-specific functionality
-│       └── billing_operations.py # Core billing operations
-├── data/                      # CSV data files
-├── requirements.txt           # Python dependencies
-└── README.md                  # This documentation
+│ ├── app/ # Main application logic
+│ ├── config/ # Configuration files
+│ │ └── colors.py # UI themes and colors
+│ ├── ui/ # User interface
+│ │ ├── main_window.py # Main application window
+│ │ └── dialogs.py # Popup dialogs and forms
+│ ├── models/ # Data models
+│ │ ├── product.py # Product data model
+│ │ └── customer.py # Customer data model
+│ ├── utils/ # Utility functions
+│ │ ├── file_operations.py # CSV file read/write operations
+│ │ ├── calculations.py # GST, totals, stock calculations
+│ │ └── reports.py # Report generation
+│ └── features/ # Feature modules
+│ ├── admin_features.py # Admin-specific functionality
+│ └── billing_operations.py # Core billing operations
+├── data/ # CSV data files
+├── requirements.txt # Python dependencies
+└── README.md # This documentation
 
 text
 
